@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+.project-grid{
+    font-family: 'Raleway', sans-serif;
+    max-width:730px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    flex-wrap :wrap;
+    border:10px solid rgb(0,0,0);
+    border-radius:10px;
+    background:linear-gradient(35deg, rgb(22, 12, 83), rgb(42, 27, 126) ,rgb(104, 24, 24) ,rgb(95, 0, 0));
+
+    &>.project-item{
+    margin:2px;
+    flex:1;
+        position: relative;
+        height:150px;
+        border:2px solid black;
+        background:rgba(0,0,0,70%);
+        color:white;
+        border-radius:10px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+
+        &>.project-details{
+            position:absolute;
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            opacity:0;
+            background:rgba(0,0,0,.95);
+            transition:opacity .2s cubic-bezier(.59,.21,.46,.78);
+            &>h2{
+                position:relative;
+                top:-105%;
+                text-align:center;               
+                transition: top .2s;
+            }
+            &>h4{
+                padding-left:20px;
+            }
+            &>ul{
+                height:75px;
+                list-style:none;
+                padding-left:20px;
+                display:flex;
+                flex-direction:column;
+                flex-wrap:wrap;
+                li{
+                    padding:3px;
+                    &>.check{
+                        color:rgb(7, 52, 148);
+                    }
+                }
+            }
+            &>.project-links{
+                position:absolute;
+                bottom:0;
+                left:100%;
+                width:100%;
+                padding: 0 10px 5px 10px;
+                display:flex;
+                justify-content:space-around;
+                align-items:center;
+                transition:left .3s ease-in-out;
+                transition-delay:.3s;
+                &>.icon:hover{
+                    color:rgb(7, 52, 148);
+                    transform:scale(1.15)
+                }
+            }
+
+
+        }
+    }
+
+    &>.project-item:hover > .project-details{
+        opacity:1;
+    }
+    &>.project-item:hover{
+        cursor:pointer;
+    }
+
+    .project-item:hover{
+        h2{
+            top:0;
+        }
+
+        .project-links{
+            left:0;
+        }
+    }
+}
+
+@media(min-width:400.9px){
+
+    .project-item{
+        min-width:280px;
+    }
+}
+@media(max-width:400px){
+
+    .project-item{
+        min-width:140px;
+        font-size:4vw;
+    }
+}
+
+
+
+@media (min-height:1200px){
+    .project-grid{
+        position:absolute;
+        top:250px;
+     }
+ 
+}

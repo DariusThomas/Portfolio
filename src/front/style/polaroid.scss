@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Shadows+Into+Light&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.pola-sheild{
+    position:relative;
+    text-decoration:none;
+    font-family: 'Permanent Marker', cursive;
+    height: 26vw;
+    width:22vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background: rgb(223, 224, 193);
+    border-radius:.2vw;
+    padding:.3vw 0;
+    &:hover >.pola-sig:after{
+        width:60%;
+        transform-origin:left;
+        left:20%;
+    }
+}
+
+.first-pola{
+    transform:rotate(-15deg);
+    top:0;
+    left:-30px;
+    box-shadow: -3px 3px 10px black;
+}
+.middle-pola{
+    transform:rotate(0deg);
+    top:-50px;
+    left:0px;
+    box-shadow: 0px 3px 10px black;
+    z-index:1;
+}
+.last-pola{
+    transform:rotate(15deg);
+    top:0;
+    left:30px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.pola-film{
+    height:75%;
+    width:95%;
+    background: rgb(15, 15, 15);
+    transition: .3s ease-out;
+    border-radius:.2vw;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 10px black;
+    &>img{
+        height:100%;
+        widows: 100%;
+        object-fit:cover;
+
+    }
+}
+
+.pola-sig{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:3vw;
+    font-weight:400;
+    color: rgb(38, 39, 39);
+
+    &:after{
+        position:absolute;
+        content:'';
+        bottom:3%;
+        right:20%;
+        transform-origin:right;
+        background: rgb(38, 39, 39);
+        width:0;
+        height:3%;
+        border-radius:10px;
+        transition: width .3s ease-in-out;
+    }
+
+}

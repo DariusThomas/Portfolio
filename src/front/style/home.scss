@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300&display=swap');
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.home-container{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    overflow-x:hidden;
+}
+.pola-container{
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+
+.title-home-blink-1{
+    animation: blink1 2s forwards 
+}
+
+.title-home-blink-2 {
+    animation: blink2 2s forwards 
+}
+
+
+@keyframes blink1{
+    0%,19.1%,29.1%{
+        opacity:0.05;
+    }
+    19%{
+        opacity:.5;
+    }
+    29%{
+        opacity:.7
+    }
+    100%{opacity:1}
+}
+
+@keyframes blink2{
+    0%,19.1%,29.1%,37%{
+        opacity:0.05;
+    }
+    19%{
+        opacity:.5
+    }
+    29%{
+        opacity:.7
+    }
+    100%{opacity:1}
+}
+

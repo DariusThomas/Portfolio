@@ -1,0 +1,50 @@
+.card{
+    font-family: 'Source Sans Pro', sans-serif;
+    display:flex;
+    background:rgb(224, 224, 224);
+    color:rgb(45, 45, 102);
+    border-radius:5px;
+    box-shadow: 3px 3px 20px 7px black;
+    margin-bottom:  30px;
+    overflow: hidden;
+    align-self:center;
+    flex-wrap:wrap;
+
+
+    &>div{
+        flex:1;
+        min-width:175px;
+        height:200px;
+        padding:20px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        align-items:center;
+    }
+
+    li{
+        font-size:1rem;
+        list-style: none;
+    }
+
+    .left{
+        background: rgb(45, 45, 102);
+        color:rgb(224, 224, 224);
+    }
+
+    #avatar{
+        height:125px;
+        width:125px;
+        object-fit:contain;
+        border-radius:50%;
+        border: 2px solid black;
+        background:darkcyan;
+        margin-bottom:10px;
+    }
+    
+}
+
+.name{
+    font-size:1.5rem;
+    white-space:nowrap;
+}

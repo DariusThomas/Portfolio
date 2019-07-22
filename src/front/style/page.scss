@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+$glow:#5900ff;
+
+body{
+    min-height:100vh;
+    background: rgb(25, 25, 25);
+
+}
+
+.page{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    width:100%;
+    min-height:100vh;
+}
+
+.head{
+    height: 120px;
+    padding: 10px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap-reverse;
+    width:80%;
+    font-size:3rem;
+}
+@media (max-width:500px){
+    .head{
+        font-size:2.8rem;
+        justify-content:center;
+    }
+}
+.title{
+    position:relative;
+    font-family: 'Quicksand', sans-serif;
+
+    span{
+        position:relative;
+        color:#bebeff;
+        font-weight:600;
+        text-shadow: 0 0 20px  $glow;
+    }
+
+    span::before{
+        content: attr(data-text);
+        position:absolute;
+        top:0;
+        left:0;
+        color: $glow;
+        z-index:-2;
+        text-shadow: 0 0 80px  $glow;
+    }
+
+    span::after{
+        content: attr(data-text);
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:-1;
+        color: $glow;
+        text-shadow: 0 0 40px  $glow;
+    }
+}
+
+.page-title{
+
+    /* this animation is applied to the neon titles on the about me, contact me, and my projects pages,
+    NOT the title on the home page*/
+    animation: on 1s forwards, flicker 5s 1s infinite
+}
+
+@media(max-width:350px){
+ .head{
+     font-size:12vw
+ }
+}
+
+@keyframes on{
+    0%{
+        opacity: 0
+    }
+    100%{
+        opacity: 1
+    }
+}
+
+@keyframes flicker{
+0%,29.5%,30.2%,31%,31.7%{
+    opacity:1;
+    
+}
+29.6%,30.1%,31.1%,31.6%{
+    opacity:.1;
+}
+}
+
+.home-link{
+    position:relative;
+    height:50px;
+    width:50px;
+    color:#bebeff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.home-link:after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    height:5%;
+    width:0;
+    right:0;
+    transform-origin:right;
+    background:white;
+    transition: width .2s;
+}
+.home-link:hover:after{
+    left:0;
+    transform-origin:left;
+    width:100%;
+}
+

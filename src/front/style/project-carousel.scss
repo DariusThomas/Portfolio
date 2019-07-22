@@ -1,0 +1,104 @@
+
+.carousel-modal{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:rgba(10,10,10,.7);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+    >.close-modal{
+        position:absolute;
+        top:10px;
+        right:20px;
+        color:white;
+        font-size: 40px;
+        font-weight:300;
+        cursor:pointer;
+
+    }
+    >.close-modal:hover{
+        transform:scale(1.05);
+    }
+
+    >.left-caret{
+        z-index:3;
+        position:absolute;
+        top:50%;
+        left:5px;
+        transform:translateY(-50%);
+        color:white;
+        font-weight:300;
+        font-size:40px;
+        cursor:pointer;
+    }
+    >.right-caret{
+        z-index:3;
+        position:absolute;
+        top:50%;
+        right:5px;
+        transform:translateY(-50%);
+        color:white;
+        font-weight:300;
+        font-size:40px;
+        cursor:pointer;
+    }
+    
+@media(max-width:375px){
+        .close-modal{
+                font-size:8vw;
+        }
+        .right-caret{
+            font-size:10vw;
+        }
+        .left-caret{
+            font-size:10vw;
+        }
+    }
+
+    
+    >.right-caret:hover{
+        transform:translateY(calc(-50% + 1.5px))
+    }
+
+    >.left-caret:hover{
+        transform:translateY(calc(-50% + 1.5px))
+    }
+    
+    &>.dot-container{
+        z-index:3;
+        position:absolute;
+        display:flex;
+        bottom:0;
+        left:50%;
+        transform:translateX(-50%);
+
+        &>.carousel-dot{
+            margin:10px;
+            height:20px;
+            width:20px;
+            border-radius:50%;
+            border:3px solid white;
+            flex-shrink:0;
+            cursor:pointer;
+        }
+    }
+}
+
+.pop{
+    animation: pop .3s forwards;
+}
+@keyframes pop{
+    0%{
+        transform: translate(-50%,0) scale(.9);
+    }
+    50%{
+        transform: translate(-50%,0) scale(1.05);
+    }
+    100%{
+        transform:translate(-50%,0) scale(1)
+    }
+}
