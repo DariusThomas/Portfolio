@@ -1,4 +1,4 @@
 node_modules/
 dist/
 public/js
-src/server/config/development.ts
+src/back/config/development.ts
