@@ -71,7 +71,6 @@ const setModal: Function = (num: number,scroll:number,setScroll:React.Dispatch<R
             
             $view.each((i, obj) => {
                 if (i + 1 == val) {
-                    $(obj).addClass("pop")
                     $(obj).css({
                         "left": "50%",
                         "opacity":"1",
