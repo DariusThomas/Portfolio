@@ -33,8 +33,8 @@ const projects: Array<IProject> = [
         title: "Portfolio",
         img: icons.portfolio,
         description: "This Portfolio is my first stand alone project designed and built, after completion of the Covalnce Code Academy. This portfolio was fun to build and gave me a chance to think more creativley, focusing a bit more on design. After complteing this portfolio, I have an even greater respect for ux/ui designers.",
-        appLink: "",
-        codeLink: "",
+        appLink: "https://darius-dev-portfolio.herokuapp.com/",
+        codeLink: "https://github.com/DariusThomas/Portfolio",
         technologiesIcon:[icons.react,icons.ts,icons.jquery,icons.sass,icons.node],
         technologies: [ "React","Typescript","JQuery","Sass","Node.JS"]
     }, {
