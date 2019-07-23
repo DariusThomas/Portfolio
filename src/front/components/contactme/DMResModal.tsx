@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useContext } from "react"
 import { DMContext } from "../../utils/context/ContactContext"
-import "../../style/DmResModal.scss"
+import "../../style/direct-message.scss"
 import { FontAwesomeIcon } from "../../../../node_modules/@fortawesome/react-fontawesome/index"
 import { faTimes, faExclamationTriangle, faThumbsUp } from "../../../../node_modules/@fortawesome/free-solid-svg-icons/index"
 const DmResModal: React.SFC<IDMProps> = (props) => {
