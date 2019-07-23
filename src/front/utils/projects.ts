@@ -24,7 +24,7 @@ const projects: Array<IProject> = [
         title: "KeyBoard Game",
         img: icons.typing,
         description: "This app was written entirely using JQuery. Its a keyboard typing game where the user trys to complete typing each sentence as quickly and accurately as possible. The app relys on keypress event listeners which relay specific keycode characters to the inteface and compare them to the currently presented character on the display.",
-        appLink: "https://salty-mountain-10279.herokuapp.com/",
+        appLink: "https://dariusthomas.github.io/Just-My-Type/",
         codeLink: "https://github.com/DariusThomas/Just-My-Type",
         technologiesIcon:[icons.jquery,icons.js,icons.css3,icons.bootstrap],
         technologies: ["JQuery","Javascript","CSS", "Bootstrap"]
